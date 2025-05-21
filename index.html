@@ -1,55 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spin the Wheel</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: url('background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        header {
-            background-image: url('header.jpg');
-            background-size: cover;
-            width: 100%;
-            height: 200px;
-            background-position: center;
-        }
-        .wheel-container {
-            position: relative;
-            margin-top: 30px;
-        }
-        .wheel {
-            width: 300px;
-            height: 300px;
-            transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
-        }
-        .spin-button {
-            margin-top: 20px;
-            cursor: pointer;
-            width: 150px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spin & Win</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header></header>
-    <div class="wheel-container">
-        <img src="wheel.png" alt="Spin Wheel" id="wheel" class="wheel">
+  <!-- Social Bar Ad (on load) -->
+  <script type="text/javascript" src="//pl26701451.profitableratecpm.com/bc/0b/5d/bc0b5dfbb5cf7a11b1bc362d01e0dbcd.js"></script>
+
+  <div class="main-container">
+    <img src="https://i.postimg.cc/fbfzGZFS/pexels-anna-alexes-18139455-8080278.jpg" class="bg-image" />
+
+    <div class="blur-card">
+      <img src="https://i.postimg.cc/MK3c6HWT/header.png" alt="Header" class="header" />
+
+      <div class="wheel-container">
+        <img id="wheel" src="https://i.postimg.cc/XYrTzkf1/wheel.png" alt="Wheel" />
+        <img src="https://i.postimg.cc/TwqB3WqM/pointer.png" class="pointer" />
+      </div>
+
+      <button id="spin" onclick="spin()">Spin Now</button>
     </div>
-    <img src="spin_button.png" alt="Spin Now" class="spin-button" onclick="spinWheel()">
-    <script>
-        function spinWheel() {
-            const wheel = document.getElementById('wheel');
-            const rotation = 360 * 5 + Math.floor(Math.random() * 360);
-            wheel.style.transform = `rotate(${rotation}deg)`;
-        }
-    </script>
+  </div>
+
+  <!-- Ads -->
+  <div id="ads-container">
+    <div class="ad-desktop">
+      <!-- Desktop Top (728x90) -->
+      <script type="text/javascript">
+        atOptions = {
+          'key': '0dbef2da9300bdcb02249873e7b59731',
+          'format': 'iframe',
+          'height': 90,
+          'width': 728,
+          'params': {}
+        };
+      </script>
+      <script src="//www.highperformanceformat.com/0dbef2da9300bdcb02249873e7b59731/invoke.js"></script>
+
+      <!-- Desktop Side (300x250) -->
+      <script type="text/javascript">
+        atOptions = {
+          'key': 'd32f315fe86b9c278284e14cb0beaacb',
+          'format': 'iframe',
+          'height': 250,
+          'width': 300,
+          'params': {}
+        };
+      </script>
+      <script src="//www.highperformanceformat.com/d32f315fe86b9c278284e14cb0beaacb/invoke.js"></script>
+    </div>
+
+    <div class="ad-mobile">
+      <!-- Mobile Top (320x50) -->
+      <script type="text/javascript">
+        atOptions = {
+          'key': '65bd1a4350fc0c6931e96b19d5b279f1',
+          'format': 'iframe',
+          'height': 50,
+          'width': 320,
+          'params': {}
+        };
+      </script>
+      <script src="//www.highperformanceformat.com/65bd1a4350fc0c6931e96b19d5b279f1/invoke.js"></script>
+
+      <!-- Mobile Bottom (320x50) -->
+      <script type="text/javascript">
+        atOptions = {
+          'key': '65bd1a4350fc0c6931e96b19d5b279f1',
+          'format': 'iframe',
+          'height': 50,
+          'width': 320,
+          'params': {}
+        };
+      </script>
+      <script src="//www.highperformanceformat.com/65bd1a4350fc0c6931e96b19d5b279f1/invoke.js"></script>
+    </div>
+  </div>
+
+  <!-- Confetti and Sound -->
+  <canvas id="confetti"></canvas>
+  <audio id="taDaSound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-notification-2018.mp3"></audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
